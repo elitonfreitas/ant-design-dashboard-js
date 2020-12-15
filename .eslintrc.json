@@ -1,0 +1,77 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": false
+  },
+  "plugins": [
+    "eslint-plugin-prettier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "prettier/prettier",
+    "prettier/react",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 140,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "no-param-reassign": [
+      "off"
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "import/no-anonymous-default-export": [
+      "off"
+    ],
+    "prefer-promise-reject-errors": [
+      "off"
+    ],
+    "react/jsx-filename-extension": [
+      "off"
+    ],
+    "react/jsx-props-no-spreading": [
+      "off"
+    ],
+    "react/jsx-wrap-multilines": [
+      "off"
+    ],
+    "no-underscore-dangle": [
+      "off"
+    ],
+    "no-nested-ternary": [
+      "off"
+    ],
+    "react/no-array-index-key": [
+      "off"
+    ],
+    "react/prop-types": [
+      "warn"
+    ],
+    "no-return-assign": [
+      "off"
+    ],
+    "arrow-body-style": [
+      "error",
+      "as-needed"
+    ]
+  }
+}

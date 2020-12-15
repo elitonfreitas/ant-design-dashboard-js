@@ -1,0 +1,127 @@
+.order-search {
+  .title {
+    color: @primary-color;
+  }
+  .ant-form-item {
+    margin-bottom: 0;
+  }
+  .ant-table-placeholder .ant-table-expanded-row-fixed {
+    min-height: 50vh;
+    vertical-align: middle;
+    .ant-empty {
+      position: relative;
+      top: 10vh;
+    }
+  }
+  .ant-table .option-link {
+    width: 100%;
+    height: 30px;
+    padding: 0;
+  }
+  .ant-table-thead th {
+    font-weight: bold;
+    color: @primary-color;
+  }
+  .user {
+    line-height: 1em;
+    span {
+      line-height: 0.8em;
+    }
+    span:nth-child(2) {
+      position: relative;
+      font-size: 0.7em;
+      display: block;
+      text-transform: uppercase;
+      color: gray;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      line-height: 1.4em;
+    }
+  }
+
+  .approver-container {
+    display: inline-block;
+    margin: 0;
+    align-items: flex-end;
+    .approver:nth-child(2)::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background-color: #ccc;
+      position: relative;
+      bottom: 63px;
+      left: -119px;
+      width: 168px;
+    }
+    .approver {
+      display: inline-block;
+      width: 130px;
+      text-align: center;
+      margin-right: 70px;
+      h5 {
+        margin-bottom: 0;
+      }
+      h4,
+      h6 {
+        visibility: hidden;
+      }
+      .ant-avatar {
+        text-transform: uppercase;
+        margin: 0 0 10px;
+      }
+    }
+    .approver.approved {
+      .ant-avatar {
+        background-color: #389e0d;
+      }
+      h4,
+      h6 {
+        visibility: visible;
+      }
+      h5 {
+        color: #389e0d;
+      }
+    }
+    .approver.denied {
+      .ant-avatar {
+        background-color: red;
+      }
+      h4,
+      h6 {
+        visibility: visible;
+      }
+      h5 {
+        color: red;
+      }
+    }
+  }
+
+  .select-columns {
+    position: absolute;
+    margin-top: 16px;
+    z-index: 2;
+    .ant-select-selection-item {
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0 0 0 4px;
+      color: @primary-color;
+      font-weight: bold;
+    }
+    .ant-select-selection-placeholder {
+      color: @primary-color;
+      font-weight: bold;
+    }
+  }
+
+  .justification {
+    display: inline-block;
+    top: 16px;
+    position: absolute;
+    h3 {
+      color: @primary-color;
+      font-weight: bold;
+    }
+  }
+}

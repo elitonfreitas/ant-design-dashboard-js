@@ -1,0 +1,44 @@
+.sider-bar-layout {
+  min-height: 100vh !important;
+}
+
+.site-layout.light .ant-layout-header,
+.site-layout.light .ant-layout-footer,
+.site-layout.light .ant-layout-content {
+  background-color: #fff !important;
+}
+.site-layout.default .ant-layout-content {
+  background-color: #fff !important;
+}
+.site-layout.default .ant-layout-footer {
+  background-color: @layout-header-background !important;
+}
+.site-layout.dark .ant-layout-header,
+.site-layout.dark .ant-layout-footer,
+.site-layout.dark .ant-layout-content {
+  background-color: none;
+}
+
+.sider-bar-layout .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin-left: 244px;
+  transition: all 100ms;
+}
+
+.sider-bar-layout .trigger.collapsed {
+  margin-left: 74px !important;
+}
+
+.layout-content {
+  transition: all 100ms;
+}
+.site-layout .layout-content {
+  min-height: calc(100vh - 182px) !important;
+}
+.layout-footer {
+  transition: all 100ms;
+}

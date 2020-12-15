@@ -1,0 +1,29 @@
+.logo-container {
+  display: grid;
+  padding: 12px 40px;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-items: center;
+  transition: all 200ms;
+}
+
+.logo-container img {
+  max-height: 40px;
+}
+
+.logo-container span {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.1em;
+  justify-self: stretch;
+}
+
+.ant-layout-sider-collapsed .logo-container {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+}
+.ant-layout-sider-collapsed .logo-container span {
+  display: none;
+}
