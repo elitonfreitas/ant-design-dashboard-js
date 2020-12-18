@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Table, Input, Space, Button } from "antd";
+import PropTypes from "prop-types";
 import Highlighter from "react-highlight-words";
 import { SearchOutlined } from "@ant-design/icons";
 import StatusBadge from "../../../atoms/StatusBadge";
 import utils from "../../../../utils/utils";
 
-export default function Dictionary(props) {
+const Dictionary = props => {
   const { order, onChangePage, pager, loading } = props;
   const { items } = order;
   const [searchedColumn, setSearchedColumn] = useState("");
@@ -198,4 +199,20 @@ export default function Dictionary(props) {
       }}
     />
   );
-}
+};
+
+Dictionary.propTypes = {
+  onChangePage: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
+  order: PropTypes.shape({
+    items: PropTypes.array,
+    error: PropTypes.string,
+    maxResults: PropTypes.number,
+    withError: PropTypes.number,
+    pageIndex: PropTypes.number,
+    pageSize: PropTypes.number,
+  }).isRequired,
+  pager: PropTypes.object.isRequired,
+};
+
+export default Dictionary;

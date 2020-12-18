@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Menu } from "antd";
+import PropTypes from "prop-types";
 import menus from "../../../routes/menu";
 import "./style.less";
 
-export default function PMenu(props) {
+const PMenu = props => {
   const { theme } = props;
   const history = useHistory();
   const menuKeys = [];
@@ -84,4 +85,10 @@ export default function PMenu(props) {
       {menus.map((item, i) => mapMenu(item, i, []))}
     </Menu>
   );
-}
+};
+
+PMenu.propTypes = {
+  theme: PropTypes.string.isRequired,
+};
+
+export default PMenu;

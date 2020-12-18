@@ -1,9 +1,10 @@
 import { Table } from "antd";
+import PropTypes from "prop-types";
 import moment from "moment";
 import StatusBadge from "../../../atoms/StatusBadge";
 import utils from "../../../../utils/utils";
 
-export default function Default(props) {
+const Default = props => {
   const { order, onChangePage, loading } = props;
   const { items } = order;
 
@@ -92,4 +93,19 @@ export default function Default(props) {
       }}
     />
   );
-}
+};
+
+Default.propTypes = {
+  onChangePage: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
+  order: PropTypes.shape({
+    items: PropTypes.array,
+    error: PropTypes.string,
+    maxResults: PropTypes.number,
+    withError: PropTypes.number,
+    pageIndex: PropTypes.number,
+    pageSize: PropTypes.number,
+  }).isRequired,
+};
+
+export default Default;

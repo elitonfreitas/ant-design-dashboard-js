@@ -1,9 +1,10 @@
 import { Button, Spin, Modal } from "antd";
+import PropTypes from "prop-types";
 import { FileExcelOutlined } from "@ant-design/icons";
 import OrderDetail from "../../../organisms/OrderDetail";
 import "./style.less";
 
-export default function OrderModal(props) {
+const OrderModal = props => {
   const { setModalVisible, setOrderId, orderId, visible } = props;
 
   return (
@@ -41,4 +42,13 @@ export default function OrderModal(props) {
       {orderId ? <OrderDetail orderId={orderId} /> : <Spin size="large" className="order-detail-spin" />}
     </Modal>
   );
-}
+};
+
+OrderModal.propTypes = {
+  setModalVisible: PropTypes.func.isRequired,
+  setOrderId: PropTypes.func.isRequired,
+  visible: PropTypes.bool.isRequired,
+  orderId: PropTypes.number.isRequired,
+};
+
+export default OrderModal;

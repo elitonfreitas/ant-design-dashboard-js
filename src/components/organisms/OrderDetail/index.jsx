@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { Layout, Descriptions, Divider, Spin, Button } from "antd";
 import moment from "moment";
 import { ClearOutlined } from "@ant-design/icons";
@@ -18,7 +19,7 @@ const actions = {
   I: "Importação",
 };
 
-export default function OrderDetail(props) {
+const OrderDetail = props => {
   const { orderId: id } = props;
   const [orderId] = useState(id);
   const [order, setOrder] = useState({});
@@ -152,4 +153,10 @@ export default function OrderDetail(props) {
       )}
     </Content>
   );
-}
+};
+
+OrderDetail.propTypes = {
+  orderId: PropTypes.number.isRequired,
+};
+
+export default OrderDetail;
