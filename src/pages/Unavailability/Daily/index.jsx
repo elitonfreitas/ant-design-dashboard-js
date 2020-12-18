@@ -1,4 +1,3 @@
-import React from "react";
 import { Layout, Row, Col, Input, Select, DatePicker, Form, Button } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import moment from "moment";

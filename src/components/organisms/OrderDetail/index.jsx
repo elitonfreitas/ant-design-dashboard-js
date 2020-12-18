@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Layout, Descriptions, Divider, Spin, Button } from "antd";
 import moment from "moment";
 import { ClearOutlined } from "@ant-design/icons";
